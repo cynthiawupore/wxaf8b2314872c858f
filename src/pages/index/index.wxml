@@ -1,0 +1,15 @@
+<view class="index" wx:if="{{!hasQR}}">
+    <form bindsubmit="bindFormSubmit">
+        <textarea name="textarea" class="input-textarea" auto-height placeholder="在此输入您想说的话..." maxlength="-1"/>
+        <button form-type="submit" class="confirm-btn" type="default">点击生成二维码</button>
+    </form>
+
+</view>
+
+<view wx:if="{{hasQR}}">
+    <canvas canvas-id="QR" class="QR" ></canvas>
+    <view class="save">
+        <text>(请您截图保存)</text>
+    </view>
+</view>
+
